@@ -1,0 +1,6 @@
+(library
+ (name CLRS)
+ (public_name CLRS.public)
+ (synopsis All implementations are compiled as a library))
+
+;;a fucking comment

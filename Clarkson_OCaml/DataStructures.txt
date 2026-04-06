@@ -1,0 +1,177 @@
+------------------------
+ module type BST = sig 
+     type 'a t
+
+     val empty: 'a t 
+
+     val make: 'a -> 'a t
+
+     val meld: 'a t -> 'a t -> 'a t
+
+     val push: 'a -> 'a t -> 'a t
+
+     val pop: 'a t -> 'a
+
+     val depth:'a t -> int 
+ end 
+
+ module type Map = sig
+
+   (** [('k, 'v) t] is the type of maps that bind keys of type
+       ['k] to values of type ['v]. *)
+   type ('k, 'v) t
+
+   (** [insert k v m] is the same map as [m], but with an additional
+       binding from [k] to [v].  If [k] was already bound in [m],
+       that binding is replaced by the binding to [v] in the new map. *)
+   val insert : 'k -> 'v -> ('k, 'v) t -> ('k, 'v) t
+
+   (** [find k m] is [Some v] if [k] is bound to [v] in [m],
+       and [None] if not. *)
+   val find : 'k -> ('k, 'v) t -> 'v option
+
+   (** [remove k m] is the same map as [m], but without any binding of [k].
+       If [k] was not bound in [m], then the map is unchanged. *)
+   val remove : 'k -> ('k, 'v) t -> ('k, 'v) t
+
+   (** [empty] is the empty map. *)
+   val empty : ('k, 'v) t
+
+   (** [of_list lst] is a map containing the same bindings as
+       association list [lst].
+       Requires: [lst] does not contain any duplicate keys. *)
+   val of_list : ('k * 'v) list -> ('k, 'v) t
+
+   (** [bindings m] is an association list containing the same
+       bindings as [m]. There are no duplicates in the list. *)
+   val bindings : ('k, 'v) t -> ('k * 'v) list
+ end
+
+---------------------------------------
+
+ Basic Implementation foundation 
+
+ -in map.ml
+
+ module AssocListMap: Map = Struct
+     type ('k,'v) t = unit 
+
+     let insert k v m = failwith "unimplemented"
+
+     let find k m =failwith "unimplemented"
+
+     let remove k m = failwith "unimplemented"
+
+     let empty = () 
+
+     let of_list lst = failwith "unimplemented"
+
+     let bindings m = failwith "unimplemented" 
+ end 
+
+------------------
+
+ in maps_test.ml
+
+ open OUnit2
+ open maps
+
+ let assoc_tests = let open AssocListMap in[
+
+ ]
+
+ let suite = "maps suite" >::: assoc_tests 
+
+ let _ = run_test_tt_main suite
+
+------------------
+
+ open OUnit2
+ open maps
+
+ let assoc_tests = let open AssocListMap in[
+     "empty has no bindings">::
+     (fun _ -> assert_equal [] (bindings empty))
+ ]
+
+ let suite = "maps suite" >::: assoc_tests 
+
+ let _ = run_test_tt_main suite
+
+--------
+
+ so now we can define 
+
+    type ('k,'v) t = ('k * 'v) list 
+
+ as and implement
+
+    let bindings m = List.map (binding m) (keys m)
+
+ with aux functions
+
+    let binding m k = (k, List.assoc k m)
+    let key m = m |> List.map fst |> List.sort_uniq StdLib.compare
+
+ additionaly amend 
+  -maps_test.ml 
+
+ open OUnit2 
+ open Maps 
+
+ let bindings_test name output input = 
+   name >:: fun _ -> 
+     assert_equal output (AssocListMap.bindings input)
+
+ let l1 =[(3110, "fun")]
+ let l2 =[(3110, "fun");(2110, "OO")]
+
+ let assoc_tests = let open AssocListMap in [
+     bindings_test "empty list has no binding" [] empty;
+     bindings_test "singleton has one binding" l1 (of_list l1);
+     bindings_test "list gas two bindings" l2 (of_list l2);
+ ]
+
+ let suite = "maps suite" >::: assoc_tests 
+
+ let _ = run_test_tt_main suite
+
+ However this testsuite is still in need of a print function
+
+ open OUnit2 
+ open Maps
+
+ let pp_list lst = 
+    let pp_elts lst =
+        let rec loop n acc = function
+            |[]->acc
+            |[h]->acc ^ pp_elt h
+            |h::(h2::t as t')->
+             if n = 100 then acc ^ "..."
+             else loop (n+1)(acc^(pp_elt h1)^"; ") t'
+    in loop 0 "" lst
+    in "[" ^ pp_elts lst ^ "]"
+ let pp_pair pp1 pp2 (a,b)
+
+
+ let bindings_test name output input = 
+   name >:: fun _ -> 
+     assert_equal output (AssocListMap.bindings input)
+     ~printer:(pp_list (pp_pair string_of_int pp_string))
+
+ let l1 =[(3110, "fun")]
+ let l2 =[(3110, "fun");(2110, "OO")]
+
+ let assoc_tests = let open AssocListMap in [
+     bindings_test "empty list has no binding" [] empty;
+     bindings_test "singleton has one binding" l1 (of_list l1);
+     bindings_test "list gas two bindings" l2 (of_list l2);
+ ]
+
+ let suite = "maps suite" >::: assoc_tests 
+
+ let _ = run_test_tt_main suite
+
+-------------------------
+DirectAddressMap 
+

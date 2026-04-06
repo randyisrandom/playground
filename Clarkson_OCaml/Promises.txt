@@ -1,0 +1,34 @@
+implementing the type constructor 
+for the monad requires declaring:
+    type 'a state =
+        |
+        |
+        |
+
+    type 'a promise = {
+        mutable state : 'a state;
+        mutable handlers : 'a handler list
+        }
+
+    let return x =
+        {state = Fulfilled x; handlers = []}
+
+to implement bind we declare
+
+    type 'a resolver = 'a promise
+
+as well as the auxillary functions 
+    (**adds a handler to handler list in promise *)
+    val enqueue:('a state -> unit) -> 'a promise -> unit 
+    val make:unit -> 'a promise * 'a resolver
+    val handler_of_callback: ('a -> 'b resolver) -> 'b resolver -> 'a handler
+        val reject:'a resolver -> exn -> unit
+            val resolve:'a resolver -> 'a state -> unit
+                val write_once: 'a promise -> 'a state -> unit
+        val fulfill: 'a resolver -> 'a -> unit
+            val resolve:'a resolver -> 'a state -> unit
+                val write_once:'a promise -> 'a state -> unit
+        val enqueue:('a state -> unit) -> 'a promise -> unit
+        val copying_handler:'a resolver -> 'a handler
+            val fulfill
+            val reject

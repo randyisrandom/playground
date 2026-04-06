@@ -1,0 +1,62 @@
+Specifications
+
+8.2
+    Specifications for functions are located in the interface file 
+    with four main clauses. 
+        [preconditions] (**:[]*)
+        [postconditions](**:[]*)
+        [raises]: dynamic typing to turn partial to total function (**Raises:[]*)
+        [examples](**Example :[]*)
+    in addition to comments for how the function are implemented
+
+    specifying modules features both the 
+        Abstraction function: Interprets the representation type as the data abstraction 
+
+        Representation Invariant: Identifies meanigful value of the representation type 
+
+Testing 
+
+8.5
+    Blackbox 
+        create an ounit suite for a set of input and output functions
+
+    Glassbox 
+
+     in dune
+        (executable
+         (name test_sorts)
+         (libraries ounit2)
+         (instrumentation
+          (backend bisect_ppx)))
+
+        run $ dune exec --instrument-with bisect_ppx ./test_sorts.exe
+
+        bisect-ppx-report html
+
+8.6
+    QCheck 
+
+    (executable
+     ...
+     (libraries ... qcheck))
+
+    Random module:
+     Random.self_init and Random.State.make_self_init sample from /dev/urandom
+     Random.get_state
+     Random.State.copy
+     Random.State.int
+
+     'a QCheck.gen.t (type 'a t = Random.State.t -> 'a)
+     uses PNRG to return values of type 'a 
+
+    open Is_even
+
+    let t = QCheck.Test.make (QCheck.make QCheck.Gen.int) is_even
+
+    QCheck_runner.run_tests [t]
+
+    
+
+
+    
+     

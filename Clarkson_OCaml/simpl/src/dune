@@ -1,0 +1,9 @@
+(library
+ (name interp));; automatically includes all modules if unspecified
+
+(menhir
+ (modules parser));; 
+
+(ocamllex lexer);; 
+
+;;mehnir and parse have their own s-expression functions 

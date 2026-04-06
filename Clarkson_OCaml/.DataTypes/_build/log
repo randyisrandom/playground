@@ -1,0 +1,16 @@
+# dune exec ./test.exe
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /home/winter-caml/.cache/dune/db
+# Workspace root: /home/winter-caml/dev/Clarkson_OCaml/.DataTypes
+# Auto-detected concurrency: 16
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /home/winter-caml/.opam/default/bin/ocamlc.opt -config > /tmp/dune_f7665c_output

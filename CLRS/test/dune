@@ -1,0 +1,39 @@
+(executables
+ (names foundations_test sorting_order_test data_structures)
+ (modes exe js)
+ (libraries CLRS alcotest))
+
+let test_function () = Alcotest.(check output_type) "Equivalent" output (To_test.function input)
+
+
+(rule
+ (alias runtest)
+ (package alcotest)
+ (action
+  (run %{dep:foundations_test.exe})))
+
+(rule
+ (alias runtest)
+ (package alcotest)
+ (action
+  (run %{dep:sorting_order_test.exe})));; runs the test as a cli executable
+
+(rule
+ (alias runtest-js)
+ (package alcotest-js)
+ (action
+  (run node %{dep:foundations_test.bc.js})))
+
+(rule
+ (alias runtest-js)
+ (package alcotest-js)
+ (action
+  (run node %{dep:sorting_order_test.bc.js})));; runs the test as browser executable 
+
+;;testing libraries: alcotest(why did community supplant ounit?), q(uick)check, glassbox, blackbox. 
+
+;;modifying the 
+
+;;understanding the use of js data
+
+not a comment, sans 

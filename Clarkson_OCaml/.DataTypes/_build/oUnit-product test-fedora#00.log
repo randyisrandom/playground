@@ -1,0 +1,78 @@
+2025-12-27T01:06:48+00:00 fedora#00 I: Runner: processes
+2025-12-27T01:06:48+00:00 fedora#00 I: Chooser: simple
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration suite_name = "product test"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration cache_filename = "/home/winter-caml/dev/Clarkson_OCaml/.DataTypes/_build/oUnit-$(suite_name).cache"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration run_gc_full_major = "true"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration display = "true"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration results_style_1_X = "false"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration testdata_dir = "none"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration health_check_interval = "1."
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration verbose = "false"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration chooser = "simple"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration output_html_dir = "none"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration processes_kill_period = "5."
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration runner = "processes"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration shards = "12"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration processes_grace_period = "5."
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration log_encoding = "utf-8"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration output_junit_file = "none"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration ci = "false"
+2025-12-27T01:06:48+00:00 fedora#00 I: Configuration output_file = "/home/winter-caml/dev/Clarkson_OCaml/.DataTypes/_build/oUnit-$(suite_name)-$(shard_id).log"
+2025-12-27T01:06:48+00:00 fedora#00 I: Using 12 workers maximum.
+2025-12-27T01:06:48+00:00 fedora#00 I: Starting worker number fedora#01.
+2025-12-27T01:06:48+00:00 fedora#00 I: Worker fedora#01 started.
+2025-12-27T01:06:48+00:00 fedora#00 I: Starting worker number fedora#02.
+2025-12-27T01:06:48+00:00 fedora#00 I: Worker fedora#02 started.
+2025-12-27T01:06:48+00:00 fedora#00 I: Starting worker number fedora#03.
+2025-12-27T01:06:48+00:00 fedora#00 I: Worker fedora#03 started.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 3 tests running : product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: 3 tests running: product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#01 I: Start test product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 3 tests running : product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: 3 tests running: product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#02 I: Start test product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 3 tests running : product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: 3 tests running: product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#03 I: Start test product test:2:two_elements.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 3 tests running : product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: 3 tests running: product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#01 I: Test product test:0:empty is successful.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 3 tests running : product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: 3 tests running: product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#01 I: End test product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 3 tests running : product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: 3 tests running: product test:2:two_elements, product test:1:singleton, product test:0:empty.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 2 tests running : product test:2:two_elements, product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#00 I: 2 tests running: product test:2:two_elements, product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#02 I: Test product test:1:singleton is successful.
+2025-12-27T01:06:48+00:00 fedora#03 I: Test product test:2:two_elements is successful.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 2 tests running : product test:2:two_elements, product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#00 I: 2 tests running: product test:2:two_elements, product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#02 I: End test product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#03 I: End test product test:2:two_elements.
+2025-12-27T01:06:48+00:00 fedora#00 I: Still 2 tests running : product test:2:two_elements, product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#00 I: 2 tests running: product test:2:two_elements, product test:1:singleton.
+2025-12-27T01:06:48+00:00 fedora#00 I: 0 tests running: .
+2025-12-27T01:06:48+00:00 fedora#00 I: Worker fedora#01 has ended.
+2025-12-27T01:06:48+00:00 fedora#00 I: Worker fedora#02 has ended.
+2025-12-27T01:06:48+00:00 fedora#00 I: Worker fedora#03 has ended.
+2025-12-27T01:06:48+00:00 fedora#00 I: Used 3 worker during test execution.
+2025-12-27T01:06:48+00:00 fedora#00 I: Run 1 tests with shard fedora#02.
+2025-12-27T01:06:48+00:00 fedora#00 I: Run 1 tests with shard fedora#03.
+2025-12-27T01:06:48+00:00 fedora#00 I: Run 1 tests with shard fedora#01.
+2025-12-27T01:06:48+00:00 fedora#00 I: Check health of shard fedora#02, 1 times.
+2025-12-27T01:06:48+00:00 fedora#00 I: Check health of shard fedora#03, 1 times.
+2025-12-27T01:06:48+00:00 fedora#00 I: Check health of shard fedora#01, 4 times.
+2025-12-27T01:06:48+00:00 fedora#00 I: ==============
+2025-12-27T01:06:48+00:00 fedora#00 I: Summary:
+2025-12-27T01:06:48+00:00 fedora#00 I: Test product test:2:two_elements is successful.
+2025-12-27T01:06:48+00:00 fedora#00 I: Test product test:1:singleton is successful.
+2025-12-27T01:06:48+00:00 fedora#00 I: Test product test:0:empty is successful.
+2025-12-27T01:06:48+00:00 fedora#00 I: Ran: 3 tests in: 0.10 seconds.
+2025-12-27T01:06:48+00:00 fedora#00 I: Cases: 3.
+2025-12-27T01:06:48+00:00 fedora#00 I: Tried: 3.
+2025-12-27T01:06:48+00:00 fedora#00 I: Errors: 0.
+2025-12-27T01:06:48+00:00 fedora#00 I: Failures: 0.
+2025-12-27T01:06:48+00:00 fedora#00 I: Skip: 0.
+2025-12-27T01:06:48+00:00 fedora#00 I: Todo: 0.
+2025-12-27T01:06:48+00:00 fedora#00 I: Timeout: 0.

@@ -1,0 +1,123 @@
+Creating the opam switch a version package list pair assigned a string or path
+
+opam switch create . 
+
+opam install owl ocaml-r 
+
+dune init project [options][name][path]
+mkdir ; dune init library
+mkdir ; dune init library
+mkdir main; dune init library 
+
+
+Prototyping the project with dune 
+
+using json parser to read from datasets and create high dimensional data for ocaml functions
+
+OCaml code for RNN on high&low dimension cylinders and R automated heatmap visualization 
+
+
+drivers working in desktop and browser 
+
+LA GRANDE VISION 
+Formalizing continous structures studied in numerical analysis
+
+Exploring dependent type theory in hopes of formally defining more 
+abstract spaces such as manifolds. 
+
+hashing data and query points into tables indexed by functions 
+ Algorithm 1 : PREPROCESSING PHASE EXHAUSTIVE r-PLEB
+ I: Metric space (X,d) and finite subset P of X, r,e>0
+ O
+  1.Take an (r,r(),p,p)-sensitive LSH family
+  2.Let k = ceiling () and L = ceiling(), where
+  3.Create family of k dimensional random hash vectors 
+  4.for i =1 to cln 
+  5.do
+  6.
+  7.
+  8.while
+  9.for
+  10.
+  11.end
+  12.end
+  13.
+  14.end
+  15.
+        Algorithm 2 : ONLINE QUERY PHASE EXHAUSTIVE r-PLEB
+        I
+        O collection of balls 
+  1.
+  2.
+  3.for
+  4.
+  5.for
+  6.
+  7.while
+  8.if then
+  9.
+  10.
+  11.
+  12.
+  13.end
+  14.
+Algorithm 3 : PREPROCESSING PHASE RNN
+  1.
+  2.for
+  3.
+  4.
+  5.
+  6.for
+  7.
+  8.
+  9.for
+  10.
+  11.
+  12.
+  13.
+        Algorithm 4 : ONLINE QUERY PHASE RNN
+  1.
+  2.for
+  3.
+  4.
+  5.
+  6.
+  7.
+  8.
+  9.
+  10.for
+  11.
+  12.
+  13.
+  14.
+        Algorithm 5 : PREPROCESSING PHASE r-BCRNN
+  1.
+  2.
+  3.
+  4.
+  5.
+  6.
+  7.
+  8.
+  9.
+  10.
+  11.
+  12.
+  13.
+  14.
+        Algorithm 6 : ONLINE QUERY PHASE r-BCRNN
+  1.
+  2.
+  3.
+  4.
+  5.
+  6.
+  7.
+  8.
+  9.
+  10.
+  11.
+  12.
+  13.
+  14.
+
