@@ -102,6 +102,7 @@ module PolynomialADTs (_ : Wildcard) = struct
   type 'a option = None | Some of 'a
   (* L = 1 + xL *)
   type 'a list = [] | (::) of 'a * 'a list
+
   (*core ml*)
   (*x+y*)
   type name = Name of string | Int of int
@@ -116,7 +117,8 @@ module PolynomialADTs (_ : Wildcard) = struct
     |Fun of var * expr
     |App of expr * expr
     |Let of var * expr * expr
-  (* T = 1 + x*T^2 *)
+  
+    (* T = 1 + x*T^2 *)
   type 'a tree = E | T of 'a * 'a tree * 'a tree
   (*isomorphism between adt polynomials*)
   (* T =  *) 
@@ -163,7 +165,8 @@ module _ (_ : Wildcard) = struct
     | Diff of expression * expression   (* e1 - e2 *)
     | Prod of expression * expression   (* e1 * e2 *)
     | Quot of expression * expression   (* e1 / e2 *)
-
+  (*So what meaningful value would derivatives and isomorphic types have*)
+  (*if a ADT's a & b are isomorphic how would functions between derivative a and b be defined*)
   exception Unbound_variable of string
 
   let rec eval env exp =
@@ -313,21 +316,34 @@ end
 (********************************************************************)
 (********************************************************************)
 (**                  Folding & Backtracking                        **)
-
+(*Identifying common recursion pattern and refactoring*)
 (********************************************************************)
 (********************************************************************)
 (**                        Laziness                                **)
-
+(*In Haskell*)
+(*other languages*)
+(*What a thunk is*)
 (********************************************************************)
 (********************************************************************)
 (**                          Monads                                **)
+(*in Haskell monads have stronger algebraic properties*)
+(*monad laws*)
+(*1*)
+(*2*)
+(*3*)
+(*lwt library connect with pragmattic programmer guidlines*)
 
 (********************************************************************)
 (********************************************************************)
-(**                    Algebraic Effects                           **)
-
+(**                             GADT's                             **)
+(*concurrency connect with iit madras course*)
 (********************************************************************)
 (********************************************************************)
 (**              Functional Reactive Programming                   **)
+(*Introduce tradidional OO background for gui and graphics*)
 
+(********************************************************************)
+(*The Expression Problem *)
+(********************************************************************)
+(*Categories and Gadt's*)
 (********************************************************************)
