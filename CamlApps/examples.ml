@@ -102,9 +102,6 @@ end
 module Listcopy = Copy (In) (Out)
 
 (*avec formatted i/o libraries*)
-module type G_I = sig end
-module type G_O = sig end
-
 module G_In =struct end 
 module G_Out=struct end 
 
@@ -128,6 +125,7 @@ let learn_ocaml =
     toplevel
     toploop"
 (*desktop based*)
+(*https://debajyatidey.hashnode.dev/build-a-cli-in-ocaml-with-the-cmdliner-library*)
 let _ = 
   "Utop 
     uTop_main
@@ -178,6 +176,7 @@ let _ = "Meta-OCaml?"
 
 
 (*Web Development*)
+(*Complete Frameworks*)
 
 let _ = "What is js_of_ocaml and how it used"
 

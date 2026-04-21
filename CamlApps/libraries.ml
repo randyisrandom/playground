@@ -118,6 +118,7 @@ module _ = Arg
 let _ = "these realize control structures"
 
 module _ = Atomic
+(*went over testing this at bobkonf?*)
 module _ = Condition
 module _ = Domain 
 module _ = Dynlink

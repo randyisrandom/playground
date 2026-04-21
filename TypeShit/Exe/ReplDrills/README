@@ -1,0 +1,8 @@
+Create a dune library 
+use dune utop command to invoke the library in a repl
+
+What is learned from this? 
+
+Composing modules from different libraries together to explore functionallity in utop 
+
+methodologies for using utop to explore directories and code bases.

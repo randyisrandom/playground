@@ -1,0 +1,123 @@
+1.1 ✅
+1.2
+    1. formulate as a recursive function of dimension.
+    2.write as a module
+    3.
+1.3 ✅
+1.4
+    write a command to execute a function in the toplevel from terminal 
+1.5 Euclid GCD ✅
+
+2.1
+Define step1l, step2l, step3l, and iso2.
+2.2
+Write a function that takes a number and a btree_deriv, and builds a btree by putting the 
+number into the “hole” in btree_deriv.
+2.3
+Rewrite the definition so only reasonable combinations of information can be constructed
+
+type connectionstate = Connecting | Connected | Disconnected
+
+type connectioninfo = {
+  state : connectionstate;
+  server : Inetaddr.t;
+  lastpingtime : Time.t option;
+  lastpingid : int option;
+  sessionid : string option;
+  wheninitiated : Time.t option;
+  whendisconnected : Time.t option;
+}
+
+2.4
+    1.Observe the types that functions with labeled and optional arguments have. Come up with 
+    coding style guidelines for when to use labeled arguments. When might they improve 
+    readability? When might they be overkill?
+
+    2.Write a rectangle-drawing procedure that takes three optional arguments: left-upper corner, 
+    right-lower corner, and a width-height pair. It should draw a correct rectangle whenever two 
+    of the three arguments are given (since any two determine the third), and raise an exception 
+    otherwise. Use the Bogue library.
+
+    3.Write a function that takes an optional argument of arbitrary type and a function argument, 
+    and passes the optional argument to the function without inspecting it. This tests your 
+    understanding of how optional arguments work at the type level.
+2.5
+    1.Give the (most general) types of the following expressions, either by guessing or by inferring 
+      by hand:
+        1.
+        2.
+    2.Give example expressions that have the following types (without using type constraints). 
+      There are many possible answers for each:
+        1.
+        2.
+2.6
+    1.
+    2.
+2.7
+ Write a function btree_deriv_at that takes a predicate over integers (i.e., a function f: int 
+ -> bool) and a btree, and builds a btree_deriv whose “hole” is in the first position for which 
+ the predicate returns true. It should return a btree_deriv option, with None if the 
+ predicate does not hold for any node.
+
+ This function lets you “search” a tree and get back a context pointing to the found element. Think 
+ about what order you want to search in (pre-order, in-order, or post-order) and what “first” 
+ means in that context.
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+
+4.1
+4.2
+4.3
+4.4
+4.5
+
+5.1
+5.2
+5.3
+5.4
+5.6
+5.7
+5.8
+
+6.1
+6.2
+6.3
+6.4
+6.5
+6.6
+6.7
+6.8
+6.9
+
+7.
+7.
+7.
+7.
+7.
+7.
+7.
+7.
+7.
+
+8.
+8.
+8.
+8.
+8.
+8.
+8.
+8.
+8.
+
+9.
+
+10.
+
+11.
+
+12. 
